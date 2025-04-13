@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100vw;
+    height: 100vh;
+    background: white;
+    overflow-x: hidden;  /*iska ham tab use krte he jab hamara content x direction me overflow/move hota ho tab
+    isase ham x-direction me movement ko hidden band karwa dete he */
+
+}
+
+.store{
+    margin:auto; /*Margin -> Auto se hamara content centre me aa jayega */ 
+    width: 60%;
+    min-height: 100vh; /* yaha pe sirf height krne pe agar ham cards ko repeat kreinge toh nhi hoga uske liye we use min-height*/
+    
+    
+}
+
+h1{ 
+    font-size: 60px;
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    font-family: "Luxurious Roman", serif;
+    font-weight: 1000;
+    font-style: normal;
+    
+}
+
+.shoes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    /* border: 2px solid black; */
+    width: 32%;
+    /* height: 500px; */
+    min-height: 500px; /*hamne normal ke jagah min-height iss liye kiu ki hamara description class ka content spread ho rha tha */
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 7px 8px 10px rgb(219, 218, 218);
+    margin-bottom: 30px;
+}
+
+.image{
+    width: 100%;
+    height: 360px;
+    /* height: 100%;  -> agar me ise nhi hatau toh card me image pura height lega toh niche ka content usme includ nhi 
+    ho paayega so always note it , iske wajah se hamne height ko hataya */ 
+    overflow: hidden;
+    border-radius: 30px;
+    
+}
+
+/* .card div:nth-child(1) > image{
+    width:100
+} */
+
+.image >img{  /*abhi ham card form kr rhe he toh iska koi utna required nhi he but animation of img ke time lagega*/
+    width:100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover; /*Hamara object sqweez ho rha tha iss liye hamne ye use kiya isase image apne org shape me aa jayega*/
+}
+
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px ; /*top/down , left/right*/
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+}
+
+/* I think cart ka image bada lag rha he ,so  */
+.cart > img{
+    width: 40px;
+    
+}
+
+/* ab thoda hoovering effect use krte he images pe */
+.image >img:hover{
+    scale: 1.2;  /*aise krne se ye hamare card ke bahar overflow kr rha he -> toh iske liye ham iske parent me jaake
+    "Overflow- hidden kr denge */
+    transition: 0.3s all ease-out;
+}
+
+p1{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+p2{
+    font-weight: bold;
+    color: rgb(156, 151, 151);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+p3{
+    font-weight: bold;
+    color: rgb(156, 151, 151);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p4{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* .luxurious-roman-regular {
+    font-family: "Luxurious Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
